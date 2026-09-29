@@ -95,7 +95,7 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&l
 const TILTS = ['-1.2deg', '0.9deg', '-0.6deg', '1.3deg', '-1deg', '0.5deg'];
 const TAPES = ['-4deg', '3deg', '-2deg', '5deg'];
 
-fetch('projects.json').then((r) => r.json()).then((items) => {
+fetch('projects.json', { cache: 'no-cache' }).then((r) => r.json()).then((items) => {
   document.getElementById('count').textContent = `${items.length} so far, more on the way`;
   const cards = items.map((p, i) => `
     <article class="card" style="--tilt:${TILTS[i % TILTS.length]};--tape-tilt:${TAPES[i % TAPES.length]}">
