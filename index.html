@@ -3,93 +3,107 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sam Sitaram · Builds</title>
-<meta name="description" content="Small, useful apps built with AI by Sam Sitaram, a product manager who ships.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
+<title>Sam Sitaram</title>
+<meta name="description" content="Small web apps by Sam Sitaram, a product manager who builds with AI.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✏️</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #faf8f4; --ink: #17171a; --muted: #62646d; --card: #ffffff; --line: #e4e0d8;
-    --accent: #d9481e; --chip: #f1ede5;
+    --bg: #faf8f3; --ink: #1b1b1e; --muted: #64666e; --card: #ffffff; --line: #e6e1d7;
+    --accent: #d9481e; --chip: #f2eee6; --tape: rgba(242, 200, 90, .55); --dot: #e7e1d4;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #121214; --ink: #eeece7; --muted: #9b9ea8; --card: #1b1b1f; --line: #2c2c32;
-      --accent: #ff7a50; --chip: #26262b;
+      --bg: #141416; --ink: #eceae5; --muted: #9b9ea7; --card: #1c1c20; --line: #2d2d33;
+      --accent: #ff8a5c; --chip: #26262b; --tape: rgba(242, 200, 90, .35); --dot: #232327;
     }
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 Inter, system-ui, sans-serif; }
-  .wrap { max-width: 1040px; margin: 0 auto; padding: 56px 16px 72px; }
-  header { max-width: 680px; margin-bottom: 44px; }
-  .hello { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
-  h1 { font-family: Fraunces, Georgia, serif; font-weight: 800; font-size: clamp(38px, 7vw, 64px); line-height: 1.02; margin: 10px 0 16px; letter-spacing: -.02em; }
-  h1 em { font-style: normal; color: var(--accent); }
-  .lede { font-size: 18px; color: var(--muted); margin: 0 0 22px; }
-  .stats { display: flex; gap: 28px; flex-wrap: wrap; }
-  .stat b { display: block; font-family: Fraunces, Georgia, serif; font-size: 34px; line-height: 1; }
-  .stat span { font-size: 13px; color: var(--muted); }
-  .links { margin-top: 22px; display: flex; gap: 16px; flex-wrap: wrap; font-size: 15px; }
-  .links a { color: var(--ink); font-weight: 600; }
+  body {
+    margin: 0; color: var(--ink); font: 16px/1.6 Inter, system-ui, sans-serif;
+    background-color: var(--bg);
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 64px 16px 80px; }
 
-  h2 { font-family: Fraunces, Georgia, serif; font-size: 26px; margin: 0 0 18px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: transform .15s ease, box-shadow .15s ease; }
-  .card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,.08); }
-  .thumb { display: block; aspect-ratio: 16 / 10; background: var(--chip); overflow: hidden; border-bottom: 1px solid var(--line); }
-  .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
-  .body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-  .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  header { max-width: 620px; margin-bottom: 56px; }
+  h1 { font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: clamp(40px, 7vw, 60px); line-height: 1.05; margin: 0 0 14px; letter-spacing: -.02em; }
+  .wave { display: inline-block; transform-origin: 70% 70%; cursor: default; }
+  h1:hover .wave { animation: wave 1.2s ease-in-out; }
+  @keyframes wave { 0%,100% { transform: rotate(0); } 20%,60% { transform: rotate(16deg); } 40%,80% { transform: rotate(-8deg); } }
+  .lede { font-size: 18px; color: var(--muted); margin: 0 0 22px; }
+  .links { display: flex; gap: 10px; flex-wrap: wrap; }
+  .links a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); text-decoration: none; font-weight: 600; font-size: 14px; transition: transform .15s ease; }
+  .links a:hover { transform: translateY(-2px) rotate(-1.5deg); }
+  .links svg { width: 16px; height: 16px; fill: currentColor; }
+
+  .section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 26px; }
+  h2 { font-family: Fraunces, Georgia, serif; font-weight: 500; font-size: 26px; margin: 0; }
+  .scribble { font-family: Caveat, cursive; font-size: 22px; color: var(--accent); transform: rotate(-3deg); display: inline-block; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 36px 28px; }
+  .card { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 12px 12px 18px; box-shadow: 0 2px 0 var(--line), 0 12px 24px rgba(0,0,0,.05); transform: rotate(var(--tilt, 0deg)); transition: transform .25s cubic-bezier(.3,1.6,.5,1), box-shadow .2s ease; display: flex; flex-direction: column; }
+  .card:hover { transform: rotate(0deg) translateY(-4px); box-shadow: 0 2px 0 var(--line), 0 18px 34px rgba(0,0,0,.09); }
+  .card::before { content: ""; position: absolute; top: -12px; left: 50%; width: 96px; height: 24px; margin-left: -48px; background: var(--tape); transform: rotate(var(--tape-tilt, -3deg)); z-index: 2; }
+  .thumb { display: block; aspect-ratio: 16 / 10; background: var(--chip); overflow: hidden; border-radius: 3px; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform .4s ease; }
+  .card:hover .thumb img { transform: scale(1.03); }
+  .doodle { font-family: Caveat, cursive; font-size: 21px; color: var(--muted); margin: 8px 4px 0; transform: rotate(-1deg); }
+  .body { padding: 10px 4px 0; display: flex; flex-direction: column; gap: 10px; flex: 1; }
   .card h3 { margin: 0; font-size: 19px; }
-  .date { font-size: 12px; color: var(--muted); white-space: nowrap; }
   .blurb { margin: 0; color: var(--muted); font-size: 15px; }
   .tags { display: flex; gap: 6px; flex-wrap: wrap; }
   .tags span { background: var(--chip); border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 500; }
   .note { font-size: 12px; color: var(--muted); margin: 0; }
   .actions { margin-top: auto; display: flex; gap: 10px; padding-top: 6px; }
-  .btn { flex: 1; text-align: center; padding: 9px 12px; border-radius: 10px; font-weight: 600; font-size: 14px; text-decoration: none; }
+  .btn { flex: 1; text-align: center; padding: 9px 12px; border-radius: 8px; font-weight: 600; font-size: 14px; text-decoration: none; }
   .btn.primary { background: var(--ink); color: var(--bg); }
   .btn.ghost { border: 1px solid var(--line); color: var(--ink); }
-  footer { margin-top: 56px; font-size: 13px; color: var(--muted); }
+
+  .soon { border: 2px dashed var(--line); border-radius: 6px; display: grid; place-items: center; min-height: 260px; text-align: center; padding: 24px; color: var(--muted); }
+  .soon .scribble { font-size: 26px; }
+
+  footer { margin-top: 64px; font-size: 13px; color: var(--muted); }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 </style>
 </head>
 <body>
 <main class="wrap">
   <header>
-    <div class="hello">Hi, I'm Sam</div>
-    <h1>Product manager who <em>builds</em>.</h1>
-    <p class="lede">I use AI to go from idea to a working app fast, usually in a day. Everything here is live and the code is public. Try them.</p>
-    <div class="stats">
-      <div class="stat"><b id="count">–</b><span>apps shipped</span></div>
-      <div class="stat"><b id="latest">–</b><span>latest build</span></div>
-    </div>
-    <div class="links">
-      <a href="https://github.com/sam0">GitHub ↗</a>
-    </div>
+    <h1>Hi, I'm Sam <span class="wave">👋</span></h1>
+    <p class="lede">I'm a product manager. On the side I build small web apps, mostly with AI doing the typing. Here's what I've made so far. Everything is live and the code is public.</p>
+    <nav class="links">
+      <a href="https://linkedin.com/in/samsearth"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
+      <a href="https://github.com/sam0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>GitHub</a>
+    </nav>
   </header>
 
   <section>
-    <h2>Builds</h2>
+    <div class="section-head">
+      <h2>Things I've built</h2>
+      <span class="scribble" id="count"></span>
+    </div>
     <div class="grid" id="grid"></div>
   </section>
 
-  <footer>Every app here was designed, coded and shipped with AI as my pair programmer.</footer>
+  <footer>Built with AI as my pair programmer.</footer>
 </main>
 
 <script>
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const fmt = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+const TILTS = ['-1.2deg', '0.9deg', '-0.6deg', '1.3deg', '-1deg', '0.5deg'];
+const TAPES = ['-4deg', '3deg', '-2deg', '5deg'];
 
 fetch('projects.json').then((r) => r.json()).then((items) => {
-  items.sort((a, b) => b.date.localeCompare(a.date));
-  document.getElementById('count').textContent = items.length;
-  document.getElementById('latest').textContent = items.length ? fmt(items[0].date) : '–';
-  document.getElementById('grid').innerHTML = items.map((p) => `
-    <article class="card">
+  document.getElementById('count').textContent = `${items.length} so far, more on the way`;
+  const cards = items.map((p, i) => `
+    <article class="card" style="--tilt:${TILTS[i % TILTS.length]};--tape-tilt:${TAPES[i % TAPES.length]}">
       <a class="thumb" href="${esc(p.live)}" aria-label="Open ${esc(p.name)}">${p.image ? `<img src="${esc(p.image)}" alt="Screenshot of ${esc(p.name)}" loading="lazy">` : ''}</a>
+      ${p.doodle ? `<div class="doodle">${esc(p.doodle)}</div>` : ''}
       <div class="body">
-        <div class="top"><h3>${esc(p.name)}</h3><span class="date">${fmt(p.date)}</span></div>
+        <h3>${esc(p.name)}</h3>
         <p class="blurb">${esc(p.blurb)}</p>
         <div class="tags">${(p.tags || []).map((t) => `<span>${esc(t)}</span>`).join('')}</div>
         ${p.note ? `<p class="note">${esc(p.note)}</p>` : ''}
@@ -98,7 +112,9 @@ fetch('projects.json').then((r) => r.json()).then((items) => {
           ${p.code ? `<a class="btn ghost" href="${esc(p.code)}">Code</a>` : ''}
         </div>
       </div>
-    </article>`).join('');
+    </article>`);
+  cards.push(`<div class="soon"><div><span class="scribble">next one's cooking…</span><p style="margin:8px 0 0;font-size:14px">Check back tomorrow.</p></div></div>`);
+  document.getElementById('grid').innerHTML = cards.join('');
 });
 </script>
 </body>
