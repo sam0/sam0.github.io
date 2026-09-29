@@ -1,0 +1,21 @@
+[
+  {
+    "name": "World Cup Fantasy Optimizer",
+    "date": "2026-06-11",
+    "blurb": "Picks the best legal fantasy squad under budget, then backtests itself against real World Cup 2026 results. Scores up to 3.8× a random squad.",
+    "tags": ["Optimization", "Sports data", "JavaScript"],
+    "live": "https://sam0.github.io/world-cup-fantasy-optimizer/",
+    "code": "https://github.com/sam0/world-cup-fantasy-optimizer",
+    "image": "img/world-cup.png"
+  },
+  {
+    "name": "SpecBar",
+    "date": "2025-03-18",
+    "blurb": "Type a rough product idea and get a complete, leadership-ready spec in about 30 seconds: personas, competitor table, requirements, metrics, risks, launch posts. Downloads as a Word doc.",
+    "tags": ["Generative AI", "Azure OpenAI", "Node"],
+    "live": "https://specbar.onrender.com",
+    "code": "https://github.com/sam0/SpecBar",
+    "image": "img/specbar.png",
+    "note": "Free hosting: first load after a quiet spell can take ~50s."
+  }
+]
