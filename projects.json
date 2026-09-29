@@ -29,6 +29,20 @@
     "doodle": "Spreadsheet Steve took a defense in round 8"
   },
   {
+    "name": "Dice Showdown",
+    "date": "2026-09-29",
+    "blurb": "A five-round dice-calling duel in an old Texas saloon. Play Daisy solo, or pass one phone between two players. The winner gets a WANTED poster.",
+    "tags": [
+      "Game",
+      "CSS 3D",
+      "Mobile"
+    ],
+    "live": "https://sam0.github.io/dice-showdown/",
+    "code": "https://github.com/sam0/dice-showdown",
+    "image": "img/dice-showdown.png",
+    "doodle": "Daisy talks trash. She's earned it."
+  },
+  {
     "name": "World Cup Fantasy Optimizer",
     "date": "2026-06-11",
     "blurb": "Picks a fantasy squad for each World Cup 2026 round using only pre-match info, then checks it against what actually happened.",
