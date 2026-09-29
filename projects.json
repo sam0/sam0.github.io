@@ -15,6 +15,20 @@
     "note": "Runs on a free server. If it's been napping, the first load takes about 50 seconds."
   },
   {
+    "name": "Tiny Museum",
+    "date": "2026-09-29",
+    "blurb": "A daily art quiz: ten famous artworks, guess who made them, then get a short, funny note on each. The notes are written by an AI that looks at every painting, then fact-checked by a second AI pass.",
+    "tags": [
+      "AI",
+      "Vision",
+      "Game"
+    ],
+    "live": "https://sam0.github.io/tiny-museum/",
+    "code": "https://github.com/sam0/tiny-museum",
+    "image": "img/tiny-museum.png",
+    "doodle": "the AI fact-checker rewrote 60% of the first drafts"
+  },
+  {
     "name": "Draft Room",
     "date": "2026-09-29",
     "blurb": "A fantasy football mock draft against eleven AI managers, each with a drafting personality and opinions about your picks. Suggests your best pick and grades every team at the end.",
